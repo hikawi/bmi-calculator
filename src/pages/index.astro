@@ -1,16 +1,11 @@
 ---
-
+import HeroSection from "../components/HeroSection.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PageLayout
+  title="BMI Calculator"
+  description="A web article that talks about what BMI is, what the scale means, bundled with a simple calculator."
+>
+  <HeroSection />
+</PageLayout>

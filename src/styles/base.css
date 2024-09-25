@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .heading-xl {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 110%; /* 4.4rem */
+    letter-spacing: -0.2rem;
+  }
+
+  .heading-l {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 110%; /* 3.3rem */
+    letter-spacing: -0.15rem;
+  }
+
+  .heading-m {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.075rem;
+  }
+
+  .heading-s {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.0625rem;
+  }
+
+  .body-m {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%; /* 1.5rem */
+  }
+
+  .body-m-bold {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 150%; /* 1.5rem */
+  }
+
+  .body-s {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+  }
+}
