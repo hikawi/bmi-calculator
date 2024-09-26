@@ -8,7 +8,7 @@ const value = defineModel<number | "">();
 
 <template>
   <div
-    class="xs:gap-6 group flex flex-row items-center justify-between gap-2 rounded-xl border-[1px] border-dark-electric-blue bg-white px-6 py-5 hover:border-blue"
+    class="xs:gap-6 group flex flex-1 flex-row items-center justify-between gap-2 rounded-xl border-[1px] border-dark-electric-blue bg-white px-6 py-5 hover:border-blue"
   >
     <input
       type="number"

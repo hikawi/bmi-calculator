@@ -8,18 +8,18 @@ const lbs = defineModel<number | "">("lbs");
 </script>
 
 <template>
-  <div class="flex w-full flex-col gap-4 md:flex-row md:gap-6">
-    <fieldset>
+  <div class="flex w-full flex-col gap-4 md:gap-6">
+    <fieldset class="w-full">
       <legend class="body-s mb-2 text-gunmetal">Height</legend>
-      <div class="flex gap-4">
+      <div class="flex w-full gap-4">
         <ValueInput v-model="ft" unit="ft" />
         <ValueInput v-model="inch" unit="in" />
       </div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="w-full">
       <legend class="body-s mb-2 text-gunmetal">Weight</legend>
-      <div class="flex gap-4">
+      <div class="flex w-full gap-4">
         <ValueInput v-model="st" unit="st" />
         <ValueInput v-model="lbs" unit="lbs" />
       </div>

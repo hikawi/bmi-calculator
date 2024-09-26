@@ -59,10 +59,12 @@ const bmi = computed(() => {
 - Obese: BMI 30 or greater
 */
 const status = computed(() => {
-  if (bmi.value < 18.5) return "Underweight";
-  if (bmi.value < 25) return "Healthy weight";
-  if (bmi.value < 30) return "Overweight";
-  return "Obese";
+  if (bmi.value < 10) return "a liar";
+  if (bmi.value < 15) return "a skeleton";
+  if (bmi.value < 18.5) return "an underweight";
+  if (bmi.value < 25) return "a healthy weight";
+  if (bmi.value < 30) return "an overweight";
+  return "an obese";
 });
 
 // To get the healthy range.
@@ -86,11 +88,18 @@ const healthyRange = computed(() => {
 
 <template>
   <div
-    class="flex flex-col gap-6 rounded-2xl bg-blue p-8 text-white md:flex-row"
+    class="flex flex-col gap-6 rounded-2xl bg-blue p-8 text-white md:flex-row md:rounded-r-full"
   >
-    <div class="flex flex-col gap-2">
+    <div class="flex w-full flex-col gap-2">
       <p class="body-m-bold">Your BMI is...</p>
       <span class="heading-l">{{ toFixed(bmi, 1) }}</span>
+    </div>
+
+    <div class="body-s flex w-full items-center text-balance">
+      <p>
+        Your BMI suggests you're {{ status }}. Your ideal weight is between
+        <span class="font-bold"> {{ healthyRange }} </span>.
+      </p>
     </div>
   </div>
 </template>

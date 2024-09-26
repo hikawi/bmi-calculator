@@ -20,7 +20,7 @@ const lbs = ref(0);
 
 <template>
   <div
-    class="shadowed absolute -bottom-8 left-1/2 flex w-full -translate-x-1/2 translate-y-full flex-col gap-6 rounded-2xl bg-white p-6 xl:gap-8 xl:p-8"
+    class="shadowed flex h-full w-full flex-col gap-6 rounded-2xl bg-white p-6 xl:max-w-[35.25rem] xl:gap-8 xl:p-8"
   >
     <h3 class="heading-m">Enter your details below</h3>
     <UnitInput v-model="unit" />

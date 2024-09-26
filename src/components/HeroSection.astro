@@ -4,28 +4,32 @@ import logo from "../assets/logo.svg";
 import Calculator from "./calculator/Calculator.vue";
 ---
 
-<section class="h-fit w-full xl:px-6">
-  <div class="gradient-bg">
-    <Image src={logo} alt="Logo of this app" class="size-10 xl:size-16" />
-    <div class="flex w-full flex-col gap-6 xl:items-start xl:justify-center">
-      <h1 class="heading-l xl:heading-xl text-balance text-center xl:text-left">
+<section
+  class="flex w-full flex-col items-center gap-6 px-6 py-8 xl:items-start xl:px-32"
+>
+  <Image src={logo} alt="Logo of this app" class="size-10 xl:mt-8 xl:size-16" />
+
+  <div class="flex flex-col gap-12 xl:flex-row xl:gap-8">
+    <div
+      class="flex h-fit w-full flex-col items-center justify-start gap-6 xl:translate-y-1/2"
+    >
+      <h1 class="heading-l xl:heading-xl w-full text-center xl:text-left">
         Body Mass<br />Index<br class="md:hidden" /> Calculator
       </h1>
-
-      <div class="relative">
-        <p
-          class="body-m text-balance text-center text-dark-electric-blue xl:text-left"
-        >
-          Better understand your weight in relation to your height using our
-          body mass index (BM) calculator. While BMI is not the sole determinant
-          of a healthy weight, it offers a valuable starting point to evaluate
-          your overall health and well-being.
-        </p>
-
-        <Calculator client:load />
-      </div>
+      <p
+        class="body-m w-full text-balance text-center text-dark-electric-blue xl:text-left"
+      >
+        Better understand your weight in relation to your height using our body
+        mass index (BM) calculator. While BMI is not the sole determinant of a
+        healthy weight, it offers a valuable starting point to evaluate your
+        overall health and well-being.
+      </p>
     </div>
+
+    <Calculator client:load />
   </div>
+
+  <div class="gradient-bg"></div>
 </section>
 
 <style>
@@ -37,6 +41,6 @@ import Calculator from "./calculator/Calculator.vue";
       rgba(214, 252, 254, 0) 100%
     );
     height: 40rem;
-    @apply flex flex-col items-center gap-6 px-6 py-8 md:gap-10 md:px-10 xl:w-2/3 xl:items-start xl:gap-32 xl:pl-28 xl:pt-16;
+    @apply absolute left-0 top-0 -z-10 w-full xl:left-6 xl:w-2/3;
   }
 </style>
