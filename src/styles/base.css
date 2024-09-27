@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer components {
   .heading-xl {
     font-size: 4rem;
     font-weight: 600;

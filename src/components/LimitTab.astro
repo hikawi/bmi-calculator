@@ -1,0 +1,35 @@
+---
+import LimitIconDisplay from "./LimitIconDisplay.vue";
+
+interface Props {
+  title: string;
+  text: string;
+}
+
+const { title, text } = Astro.props;
+---
+
+<div
+  class="shadowed hover:more-shadowed flex flex-col gap-4 rounded-2xl bg-white p-6 duration-200 hover:-translate-x-2 hover:-translate-y-2 md:col-span-2 md:p-8 xl:col-span-4"
+  class:list={{
+    "xl:col-start-8": title === "Gender",
+    "xl:col-start-5": title === "Age",
+    "xl:col-start-3": title === "Pregnancy",
+    "md:col-start-2 xl:col-start-7": title === "Race",
+  }}
+>
+  <div class="flex w-full flex-row items-center gap-4">
+    <LimitIconDisplay title={title} />
+    <h3 class="heading-s">{title}</h3>
+  </div>
+
+  <p class="body-m text-balance text-dark-electric-blue">{text}</p>
+</div>
+
+<style lang="sass">
+  .shadowed
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25)
+
+  .more-shadowed
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.5)
+</style>
