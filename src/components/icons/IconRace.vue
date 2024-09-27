@@ -5,6 +5,7 @@
     height="32"
     fill="none"
     viewBox="0 0 32 32"
+    aria-hidden="true"
   >
     <path
       fill="#F21E84"

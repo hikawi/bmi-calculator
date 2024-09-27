@@ -3,7 +3,7 @@ const unit = defineModel<"metric" | "imperial">();
 </script>
 
 <template>
-  <fieldset class="flex w-full flex-row gap-6">
+  <div class="flex w-full flex-row gap-6">
     <label class="body-m-bold flex flex-1 flex-row items-center gap-4">
       <input
         type="radio"
@@ -24,7 +24,7 @@ const unit = defineModel<"metric" | "imperial">();
       />
       Imperial
     </label>
-  </fieldset>
+  </div>
 </template>
 
 <style lang="sass" scoped>

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/logo.svg";
+import hero from "../data/hero";
 import Calculator from "./calculator/Calculator.vue";
 ---
 
@@ -19,10 +20,7 @@ import Calculator from "./calculator/Calculator.vue";
       <p
         class="body-m w-full text-balance text-center text-dark-electric-blue xl:text-left"
       >
-        Better understand your weight in relation to your height using our body
-        mass index (BM) calculator. While BMI is not the sole determinant of a
-        healthy weight, it offers a valuable starting point to evaluate your
-        overall health and well-being.
+        {hero.body}
       </p>
     </div>
 

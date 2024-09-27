@@ -5,6 +5,7 @@
     height="64"
     fill="none"
     viewBox="0 0 64 64"
+    aria-hidden="true"
   >
     <circle cx="32" cy="32" r="32" fill="#F21E84" opacity=".15"></circle>
     <path

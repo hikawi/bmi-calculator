@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import manEating from "../assets/image-man-eating.webp";
+import explanation from "../data/explanation";
 import PatternLeftCurve from "./icons/PatternLeftCurve.astro";
 ---
 
@@ -17,20 +18,15 @@ import PatternLeftCurve from "./icons/PatternLeftCurve.astro";
   </div>
 
   <div class="flex w-full flex-col gap-8 px-6">
-    <div class="hidden w-full justify-end px-10 xl:flex">
+    <div class="hidden w-full justify-end px-10 xl:flex" aria-hidden="true">
       <PatternLeftCurve />
     </div>
 
     <h2 class="heading-l text-[2rem] xl:text-[3rem]">
-      What your BMI result means
+      {explanation.heading}
     </h2>
     <p class="body-m text-balance text-dark-electric-blue">
-      A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining
-      a healthy weight may lower your chances of experiencing health issues
-      later on, such as obesity and type 2 diabetes. Aim for a nutritious diet
-      with reduced fat and sugar content, incorporating ample fruits and
-      vegetables. Additionally, strive for regular physical activity, ideally
-      about 30 minutes daily for five days a week.
+      {explanation.body}
     </p>
   </div>
 </section>
