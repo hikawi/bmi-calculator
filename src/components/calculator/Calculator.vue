@@ -22,7 +22,7 @@ const lbs = ref(0);
   <div
     class="shadowed flex h-full w-full flex-col gap-6 rounded-2xl bg-white p-6 xl:max-w-[35.25rem] xl:gap-8 xl:p-8"
   >
-    <h3 class="heading-m">Enter your details below</h3>
+    <span class="heading-m">Enter your details below</span>
     <UnitInput v-model="unit" />
 
     <MetricPanel v-model:cm="cm" v-model:kg="kg" v-if="unit === 'metric'" />
