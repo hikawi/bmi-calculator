@@ -8,14 +8,14 @@ import UnitInput from "./UnitInput.vue";
 const unit = ref<"metric" | "imperial">("metric");
 
 // Metric units
-const cm = ref(0);
-const kg = ref(0);
+const cm = ref<number | "">("");
+const kg = ref<number | "">("");
 
 // Imperial units
-const ft = ref(0);
-const inch = ref(0);
-const st = ref(0);
-const lbs = ref(0);
+const ft = ref<number | "">("");
+const inch = ref<number | "">("");
+const st = ref<number | "">("");
+const lbs = ref<number | "">("");
 </script>
 
 <template>

@@ -26,6 +26,18 @@ const error = computed(() => {
   else return [props.cm, props.kg].some(isInvalidNumber);
 });
 
+// Show a welcome message if there's nothing input.
+const welcome = computed(() => {
+  return (
+    props.cm === "" &&
+    props.kg === "" &&
+    props.ft === "" &&
+    props.inch === "" &&
+    props.st === "" &&
+    props.lbs === ""
+  );
+});
+
 function toFixed(num: number, precision: number): string {
   return (+(Math.round(+(num + "e" + precision)) + "e" + -precision)).toFixed(
     precision,
@@ -88,7 +100,17 @@ const healthyRange = computed(() => {
 
 <template>
   <div
+    class="flex flex-col gap-6 rounded-2xl bg-blue p-8 text-white md:rounded-r-full"
+    v-if="welcome"
+  >
+    <h1 class="heading-m">Welcome!</h1>
+    <p class="body-s">
+      Enter your height and weight and you’ll see your BMI result here
+    </p>
+  </div>
+  <div
     class="flex flex-col gap-6 rounded-2xl bg-blue p-8 text-white md:flex-row md:rounded-r-full"
+    v-else
   >
     <div class="flex w-full flex-col gap-2">
       <p class="body-m-bold">Your BMI is...</p>
